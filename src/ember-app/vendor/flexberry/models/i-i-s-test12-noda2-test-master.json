@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISTest12Noda2testMaster",
+  "modelName": "i-i-s-test12-noda2-test-master",
+  "className": "testMaster",
+  "nameSpace": "IIS.Test12Noda2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "countNum",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "testMasterE",
+      "modelName": "i-i-s-test12-noda2-test-master",
+      "attrs": [
+        {
+          "name": "countNum",
+          "caption": "Count num",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "testMasterL",
+      "modelName": "i-i-s-test12-noda2-test-master",
+      "attrs": [
+        {
+          "name": "countNum",
+          "caption": "Count num",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

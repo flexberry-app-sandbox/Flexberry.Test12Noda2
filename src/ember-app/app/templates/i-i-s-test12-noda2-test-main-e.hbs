@@ -1,0 +1,79 @@
+<h3 class="ui header">{{t "forms.i-i-s-test12-noda2-test-main-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.asd
+      class=(if (v-get validationModel "asd" "isInvalid") "error")
+      label=(t "forms.i-i-s-test12-noda2-test-main-e.asd-caption")
+      data-test-i-i-s-test12-noda2-test-main-e-asd=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "asd" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.asd2
+      class=(if (v-get validationModel "asd2" "isInvalid") "error")
+      label=(t "forms.i-i-s-test12-noda2-test-main-e.asd2-caption")
+      data-test-i-i-s-test12-noda2-test-main-e-asd2=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "asd2" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-test12-noda2-test-main-e.master-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.master
+      displayAttributeName="countNum"
+      autocomplete=true
+      relationName="master"
+      projection="testMasterL"
+      title=(t "forms.i-i-s-test12-noda2-test-main-e.master-caption")
+      readonly=readonly
+      componentName="masterLookup"
+      class=(if (v-get validationModel "master" "isInvalid") "error")
+      data-test-i-i-s-test12-noda2-test-main-e-master=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "master" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-test12-noda2-test-main-e.detail-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="detailGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.detail
+      content=model.detail
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "detail" "isInvalid") "error")
+      data-test-i-i-s-test12-noda2-test-main-e-detail=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "detail" "message")}}
+  </div>
+</form>

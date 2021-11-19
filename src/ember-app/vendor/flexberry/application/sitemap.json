@@ -1,0 +1,29 @@
+﻿{
+  "applicationCaption": "Jdl",
+  "applicationTitle": "Jdl",
+  "items": [
+    {
+      "link": null,
+      "menuName": "jdl",
+      "caption": "jdl",
+      "title": "jdl",
+      "children": [
+        {
+          "link": "i-i-s-test12-noda2-test-main-l",
+          "menuName": null,
+          "caption": "Test main",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-test12-noda2-test-master-l",
+          "menuName": null,
+          "caption": "Test master",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Test master",
+  "name": "IISTest12Noda2testMasterE",
+  "className": "testMasterE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-test12-noda2-test-master",
+      "modelProjection": "testMasterE"
+    }
+  ]
+}

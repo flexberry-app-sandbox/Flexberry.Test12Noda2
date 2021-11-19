@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "master",
+      "projection": "testMasterL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Test main",
+  "name": "IISTest12Noda2testMainE",
+  "className": "testMainE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-test12-noda2-test-main",
+      "modelProjection": "testMainE"
+    }
+  ]
+}

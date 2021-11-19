@@ -1,0 +1,1 @@
+docker-compose -p test12noda2 up -d

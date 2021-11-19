@@ -1,0 +1,141 @@
+﻿{
+  "name": "IISTest12Noda2testMain",
+  "modelName": "i-i-s-test12-noda2-test-main",
+  "className": "testMain",
+  "nameSpace": "IIS.Test12Noda2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "asd",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "asd2",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "master",
+      "relatedTo": "i-i-s-test12-noda2-test-master",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "detail",
+      "relatedTo": "i-i-s-test12-noda2-test-detail",
+      "inverse": "main"
+    }
+  ],
+  "projections": [
+    {
+      "name": "testMainE",
+      "modelName": "i-i-s-test12-noda2-test-main",
+      "attrs": [
+        {
+          "name": "asd",
+          "caption": "Asd",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "asd2",
+          "caption": "Asd2",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "countNum",
+          "lookupValueField": "countNum",
+          "relationName": "master",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "countNum",
+              "caption": "Count num",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Master",
+          "name": "master",
+          "relatedTo": "i-i-s-test12-noda2-test-master",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "testDetailE",
+          "caption": "Detail",
+          "name": "detail",
+          "relatedTo": "i-i-s-test12-noda2-test-detail",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "testMainL",
+      "modelName": "i-i-s-test12-noda2-test-main",
+      "attrs": [
+        {
+          "name": "asd",
+          "caption": "Asd",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "asd2",
+          "caption": "Asd2",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "master",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "countNum",
+              "caption": "Count num",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Count num",
+          "name": "master",
+          "relatedTo": "i-i-s-test12-noda2-test-master",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
